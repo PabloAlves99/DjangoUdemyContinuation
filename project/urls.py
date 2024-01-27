@@ -16,7 +16,7 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.http import HttpResponse
-from django.urls import path
+from django.urls import path, include
 from home import views as home_views
 from blog import views as blog_views
 
@@ -32,7 +32,7 @@ def blog(request):
 
 
 urlpatterns = [
-    path('', home_views.home),
-    path('blog/', blog_views.blog),
+    path('', include('home.urls')),
+    path('blog/', include('blog.urls')),
     path('admin/', admin.site.urls),
 ]
