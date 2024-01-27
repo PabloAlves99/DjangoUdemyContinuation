@@ -19,12 +19,18 @@ from django.http import HttpResponse
 from django.urls import path
 
 
-def my_view(request):
-    print('Deu bom')
-    return HttpResponse('Deu bom no site')
+def home(request):
+    print('home')
+    return HttpResponse('home1')
+
+
+def blog(request):
+    print('blog')
+    return HttpResponse('blog')
 
 
 urlpatterns = [
+    path('', home),
+    path('blog/', blog),
     path('admin/', admin.site.urls),
-    path('blog/', my_view),
 ]
