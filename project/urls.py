@@ -17,6 +17,8 @@ Including another URLconf
 from django.contrib import admin
 from django.http import HttpResponse
 from django.urls import path
+from home import views as home_views
+from blog import views as blog_views
 
 
 def home(request):
@@ -30,7 +32,7 @@ def blog(request):
 
 
 urlpatterns = [
-    path('', home),
-    path('blog/', blog),
+    path('', home_views.home),
+    path('blog/', blog_views.blog),
     path('admin/', admin.site.urls),
 ]
