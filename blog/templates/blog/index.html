@@ -3,9 +3,7 @@
 {% block texto %} {{text}}{% endblock texto %}
 
 {% block posts %}
-    {% include "global/parcials/postblock.html" %}
-    {% include "global/parcials/postblock.html" %}
-    {% include "global/parcials/postblock.html" %}
-    {% include "global/parcials/postblock.html" %}
-    {% include "global/parcials/postblock.html" %}
+    {% for post in posts %}
+        {% include "global/parcials/postblock.html" %}
+    {% endfor %}
 {% endblock posts %}

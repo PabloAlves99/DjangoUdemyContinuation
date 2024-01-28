@@ -1,4 +1,5 @@
-from os import name
+# pylint: disable=all
+from blog.data import posts
 from django.shortcuts import render
 
 
@@ -6,7 +7,8 @@ def blog(request):
     print('home do blog')
 
     context = {
-        'text': 'Olá BLOG'
+        'text': 'Olá BLOG',
+        'posts': posts
     }
 
     return render(
