@@ -18,3 +18,21 @@ body{
 
     background-color: rgb(164, 231, 255);
 }
+
+.content{
+    display: grid;
+    gap: 1.5rem;
+    padding: 1.5rem;
+}
+
+.post{
+    background-color: #fff;
+    padding: 1.5rem;
+    box-shadow: 5px 2px 5px rgba(0, 0, 0, 10%);
+}
+
+@media (min-width: 600px){
+    .content{
+        grid-template-columns: repeat(auto-fill, minmax(32rem, 1fr));
+    }
+}
