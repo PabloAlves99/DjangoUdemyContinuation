@@ -1,3 +1,7 @@
 {% extends "global/base.html" %}
 
-{% block texto %}Testando o BLOG{% endblock texto %}
+{% block texto %} {{text}}{% endblock texto %}
+
+{% block posts %}
+    {% include "global/parcials/postblock.html" %}
+{% endblock posts %}
