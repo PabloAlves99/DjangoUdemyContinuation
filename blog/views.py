@@ -4,10 +4,10 @@ from django.shortcuts import render
 
 
 def blog(request):
-    print('home do blog')
+    print('blog')
 
     context = {
-        'text': 'Olá BLOG',
+        # 'text': 'Olá BLOG',
         'posts': posts
     }
 
@@ -17,6 +17,19 @@ def blog(request):
         context
     )
 
+def post(request, id):
+    print(id)
+
+    context = {
+        # 'text': 'Olá BLOG',
+        'posts': posts
+    }
+
+    return render(
+        request,
+        'blog/index.html',
+        context
+    )
 
 def exemplo(request):
     print('exemplo do blog')
